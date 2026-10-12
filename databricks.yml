@@ -1,0 +1,19 @@
+# Bundle scaffold. Validate and adapt to the current Databricks Free Edition workspace
+# before configuring secrets or enabling the manual deployment workflow.
+bundle:
+  name: supply-chain-lakehouse
+
+variables:
+  catalog:
+    description: Workspace catalog available to the deploying identity
+    default: workspace
+  schema:
+    description: Project schema
+    default: supply_chain
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: ${env.DATABRICKS_HOST}

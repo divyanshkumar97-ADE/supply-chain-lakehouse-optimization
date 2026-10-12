@@ -1,0 +1,1 @@
+"""Supply Chain Lakehouse project package."""
